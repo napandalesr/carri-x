@@ -67,12 +67,21 @@ jobs:
           echo "Descargando Godot v${GODOT_VERSION}..."
           curl -sL "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_macos.universal.zip" -o godot.zip
           unzip -q godot.zip
-          mkdir -p /usr/local/bin
+          
           APP_NAME=$(find . -maxdepth 1 -name "*.app" | head -n 1)
           echo "Aplicación Godot encontrada: $APP_NAME"
-          sudo mv "$APP_NAME/Contents/MacOS/Godot" /usr/local/bin/godot
-          sudo chmod +x /usr/local/bin/godot
-          godot --version
+          
+          # Quitar cuarentena de macOS Gatekeeper para evitar Killed: 9 (exit code 137)
+          sudo xattr -cr "$APP_NAME"
+          sudo xattr -dr com.apple.quarantine "$APP_NAME" 2>/dev/null || true
+          
+          # Instalar la app completa en /Applications y enlazar el binario
+          sudo rm -rf /Applications/Godot.app
+          sudo mv "$APP_NAME" /Applications/Godot.app
+          sudo ln -sf /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
+          
+          # Verificar versión en modo headless
+          godot --headless --version
 
           echo "Descargando plantillas de exportación..."
           TEMPLATES_DIR="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
@@ -80,8 +89,12 @@ jobs:
           curl -sL "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" -o templates.tpz
           unzip -q templates.tpz -d "$RUNNER_TEMP/templates_unzipped"
           mv "$RUNNER_TEMP/templates_unzipped/templates"/* "$TEMPLATES_DIR/"
+          
+          # Limpiar archivos pesados descargados para liberar espacio
+          rm -f godot.zip templates.tpz
+          rm -rf "$RUNNER_TEMP/templates_unzipped"
+          
           echo "Plantillas instaladas con éxito."
-          ls -la "$TEMPLATES_DIR"
 
       - name: 🛠️ Exportar Proyecto Godot a Proyecto Xcode
         run: |
