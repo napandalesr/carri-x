@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="120" height="80">
+  <defs>
+    <clipPath id="clip_es">
+      <rect width="120" height="80" rx="14" ry="14"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip_es)">
+    <!-- Franja roja superior -->
+    <rect width="120" height="20" fill="#AA151B"/>
+    <!-- Franja amarilla central -->
+    <rect y="20" width="120" height="40" fill="#F1BF00"/>
+    <!-- Franja roja inferior -->
+    <rect y="60" width="120" height="20" fill="#AA151B"/>
+    <!-- Escudo estilizado sobre la franja amarilla -->
+    <g transform="translate(36, 40)">
+      <!-- Corona -->
+      <path d="M -9 -14 L -6 -8 L 0 -11 L 6 -8 L 9 -14 L 6 -5 L -6 -5 Z" fill="#AA151B"/>
+      <circle cx="-6" cy="-8" r="1.2" fill="#F1BF00"/>
+      <circle cx="0" cy="-11" r="1.2" fill="#F1BF00"/>
+      <circle cx="6" cy="-8" r="1.2" fill="#F1BF00"/>
+      <!-- Escudo -->
+      <path d="M -9 -4 L 9 -4 L 9 4 C 9 10, 0 14, 0 14 C 0 14, -9 10, -9 4 Z" fill="#AA151B"/>
+      <path d="M -7 -2 L 7 -2 L 7 3 C 7 8, 0 12, 0 12 C 0 12, -7 8, -7 3 Z" fill="#F1BF00"/>
+      <rect x="-4" y="0" width="8" height="6" fill="#AA151B" rx="1"/>
+      <!-- Columnas laterales de Hércules -->
+      <rect x="-14" y="-8" width="3" height="19" fill="#AA151B" rx="1"/>
+      <rect x="11" y="-8" width="3" height="19" fill="#AA151B" rx="1"/>
+      <!-- Cintas de las columnas -->
+      <rect x="-15" y="-1" width="5" height="3" fill="#F1BF00"/>
+      <rect x="10" y="-1" width="5" height="3" fill="#F1BF00"/>
+    </g>
+    <!-- Borde redondeado elegante -->
+    <rect width="120" height="80" rx="14" ry="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="4"/>
+  </g>
+</svg>

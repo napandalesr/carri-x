@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 400" width="240" height="400">
+  <!-- Ruedas -->
+  <rect x="15" y="55" width="26" height="70" rx="8" fill="#111111" stroke="#333333" stroke-width="2"/>
+  <rect x="199" y="55" width="26" height="70" rx="8" fill="#111111" stroke="#333333" stroke-width="2"/>
+  <rect x="15" y="275" width="26" height="70" rx="8" fill="#111111" stroke="#333333" stroke-width="2"/>
+  <rect x="199" y="275" width="26" height="70" rx="8" fill="#111111" stroke="#333333" stroke-width="2"/>
+  
+  <!-- Llantas metálicas doradas/negras -->
+  <rect x="20" y="70" width="16" height="40" rx="4" fill="#FFD54F"/>
+  <rect x="204" y="70" width="16" height="40" rx="4" fill="#FFD54F"/>
+  <rect x="20" y="290" width="16" height="40" rx="4" fill="#FFD54F"/>
+  <rect x="204" y="290" width="16" height="40" rx="4" fill="#FFD54F"/>
+
+  <!-- Carrocería Principal (Superdeportivo Amarillo GT) -->
+  <path d="M 120 28 C 65 28, 36 60, 36 120 L 32 290 C 32 355, 62 378, 120 378 C 178 378, 208 355, 208 290 L 204 120 C 204 60, 175 28, 120 28 Z" fill="#FBC02D" stroke="#F57F17" stroke-width="5"/>
+
+  <!-- Capó Carbono Vents -->
+  <polygon points="90,65 150,65 142,105 98,105" fill="#212121"/>
+  <line x1="102" y1="75" x2="138" y2="75" stroke="#FBC02D" stroke-width="3"/>
+  <line x1="105" y1="85" x2="135" y2="85" stroke="#FBC02D" stroke-width="3"/>
+  <line x1="108" y1="95" x2="132" y2="95" stroke="#FBC02D" stroke-width="3"/>
+
+  <!-- Faros Delanteros Afilados GT -->
+  <polygon points="46,42 88,52 78,72 44,58" fill="#E0F7FA" stroke="#00E5FF" stroke-width="2"/>
+  <polygon points="194,42 152,52 162,72 196,58" fill="#E0F7FA" stroke="#00E5FF" stroke-width="2"/>
+
+  <!-- Parabrisas Delantero Oscuro -->
+  <path d="M 52 120 L 188 120 L 172 198 L 68 198 Z" fill="#111827" stroke="#1F2937" stroke-width="4"/>
+  <path d="M 60 128 L 180 128 L 168 165 L 72 165 Z" fill="#374151" opacity="0.5"/>
+
+  <!-- Techo de Fibra de Carbono -->
+  <path d="M 68 198 L 172 198 L 166 268 L 74 268 Z" fill="#212121"/>
+
+  <!-- Ventana Trasera / Persiana de Motor -->
+  <path d="M 74 272 L 166 272 L 158 318 L 82 318 Z" fill="#111827" stroke="#F57F17" stroke-width="2"/>
+  <line x1="80" y1="285" x2="160" y2="285" stroke="#424242" stroke-width="4"/>
+  <line x1="83" y1="300" x2="157" y2="300" stroke="#424242" stroke-width="4"/>
+
+  <!-- Espejos Retrovisores GT -->
+  <rect x="16" y="125" width="22" height="14" rx="4" fill="#212121"/>
+  <rect x="202" y="125" width="22" height="14" rx="4" fill="#212121"/>
+
+  <!-- Alerón Trasero GT Gigante -->
+  <rect x="36" y="352" width="168" height="16" rx="5" fill="#111111" stroke="#F57F17" stroke-width="2"/>
+  <rect x="60" y="344" width="14" height="20" fill="#212121"/>
+  <rect x="166" y="344" width="14" height="20" fill="#212121"/>
+
+  <!-- Luces Traseras Neón -->
+  <rect x="42" y="372" width="40" height="7" rx="3" fill="#FF3D00"/>
+  <rect x="158" y="372" width="40" height="7" rx="3" fill="#FF3D00"/>
+</svg>

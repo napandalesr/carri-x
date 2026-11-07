@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Carril X</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131b2e;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --primary-hover: #0284c7;
+            --accent: #f59e0b;
+            --border: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            vertical-align: middle;
+        }
+
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-top: 32px;
+            margin-bottom: 14px;
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        ul {
+            margin-left: 24px;
+            margin-bottom: 18px;
+            color: var(--text-color);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background-color: rgba(56, 189, 248, 0.08);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.98rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.04);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 10px;
+            }
+            .container {
+                padding: 24px 18px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Carril X <span class="app-badge">Juego 2D</span></h1>
+        <p class="meta-info"><strong>Aplicación:</strong> Carril X (Identificador: <code>com.carrilx.carrilx</code>)</p>
+        <p class="meta-info"><strong>Última actualización:</strong> 4 de noviembre de 2026</p>
+    </header>
+
+    <div class="highlight-box">
+        Esta Política de Privacidad describe cómo <strong>Carril X</strong> recopila, utiliza, mantiene y divulga la información obtenida de los usuarios al utilizar el juego móvil disponible en Google Play Store. Cumplimos con los requisitos del Reglamento General de Protección de Datos (GDPR), la Ley de Privacidad del Consumidor de California (CCPA) y las Directrices de Datos de Usuario de Google Play.
+    </div>
+
+    <h2>1. Resumen General</h2>
+    <p>
+        <strong>Carril X</strong> es un videojuego arcade de esquivar vehículos diseñado para entretenimiento. Respetamos profundamente su privacidad: <strong>no requerimos registro, no creamos cuentas de usuario y no almacenamos en nuestros propios servidores información personal</strong> como su nombre real, dirección de correo electrónico, número telefónico ni ubicación geográfica precisa.
+    </p>
+
+    <h2>2. Información que Tratamos y Cómo se Obtiene</h2>
+
+    <h3>A. Datos Almacenados Localmente en su Dispositivo</h3>
+    <p>
+        Para que pueda disfrutar del juego de forma continua, el juego genera y guarda un archivo local en la memoria de su dispositivo (<code>user://progreso.save</code>). Este archivo contiene exclusivamente:
+    </p>
+    <ul>
+        <li>Nivel actual alcanzado y récord de puntuación.</li>
+        <li>Monedas virtuales acumuladas durante las partidas.</li>
+        <li>Vehículos desbloqueados en el garaje y auto seleccionado.</li>
+        <li>Preferencias del jugador (modo de control táctil y estado de sonido/música).</li>
+    </ul>
+    <p><em>Estos datos nunca se transmiten a servidores externos privados; residen de forma aislada en su propio teléfono móvil.</em></p>
+
+    <h3>B. Datos Recopilados por Servicios Publicitarios de Terceros</h3>
+    <p>
+        El juego utiliza la red publicitaria <strong>Google AdMob</strong> (Google Ireland Limited / Google LLC) para mostrar anuncios que permiten mantener el juego gratuito. Google AdMob puede recopilar y procesar automáticamente cierta información de su dispositivo a través de kits de desarrollo de software (SDK), que incluye:
+    </p>
+    <ul>
+        <li><strong>Identificadores de publicidad:</strong> Identificador de Publicidad de Android (Google Advertising ID - GAID / AAID).</li>
+        <li><strong>Datos del dispositivo:</strong> Modelo de hardware, versión del sistema operativo, operador móvil y configuración de idioma.</li>
+        <li><strong>Datos de red y ubicación aproximada:</strong> Dirección IP (usada para determinar el país o ciudad aproximada con fines de servicio de anuncios regionalizados).</li>
+        <li><strong>Métricas de interacción con anuncios:</strong> Impresiones visualizadas, clics en anuncios de recompensa (videos para obtener vidas o monedas) y eventos de diagnóstico de fallos técnicos.</li>
+    </ul>
+
+    <h2>3. Proveedores de Servicios Terceros</h2>
+    <p>
+        Para garantizar transparencia total ante nuestros jugadores y ante Google Play, enumeramos los servicios externos integrados en el juego:
+    </p>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Proveedor</th>
+                    <th>Finalidad</th>
+                    <th>Política de Privacidad Oficial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Google Play Services</strong></td>
+                    <td>Distribución de la aplicación, servicios base de Android e integridad del paquete.</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Google AdMob</strong></td>
+                    <td>Monetización mediante anuncios de inicio (App Open), pantallas intersticiales entre niveles y videos recompensados voluntarios.</td>
+                    <td>
+                        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Políticas de Anuncios de Google</a><br>
+                        <a href="https://policies.google.com/privacy/partners" target="_blank" rel="noopener">Cómo usa Google los datos</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>4. Finalidad del Tratamiento de Datos</h2>
+    <p>Los datos mencionados se utilizan exclusivamente para:</p>
+    <ul>
+        <li>Garantizar el guardado y la continuidad de su partida.</li>
+        <li>Cargar y reproducir anuncios publicitarios relevantes de forma segura.</li>
+        <li>Permitir la recompensa de vidas extra o monedas virtuales tras ver anuncios voluntarios.</li>
+        <li>Prevenir el fraude publicitario, proteger contra actividades maliciosas y supervisar el rendimiento técnico de la app.</li>
+    </ul>
+
+    <h2>5. Privacidad de Menores (COPPA / GDPR-K)</h2>
+    <p>
+        <strong>Carril X</strong> es un juego apto para público general. No recopilamos conscientemente información de identificación personal de niños menores de 13 años (o menores de 16 años en el Espacio Económico Europeo). Si un padre o tutor detecta que su hijo nos ha proporcionado información involuntariamente a través de servicios publicitarios, puede solicitar el restablecimiento o supresión comunicándose con nosotros o ajustando las preferencias de publicidad de Google en el dispositivo del menor.
+    </p>
+
+    <h2>6. Control de los Usuarios y Eliminación de Datos</h2>
+    <p>Usted tiene el control total sobre sus datos en cualquier momento:</p>
+    <ul>
+        <li>
+            <strong>Eliminación de datos del juego:</strong> Puede borrar todo su progreso, monedas y récords en cualquier momento desinstalando la aplicación de su dispositivo o ingresando a <em>Ajustes de Android &gt; Aplicaciones &gt; Carril X &gt; Almacenamiento &gt; Borrar datos</em>.
+        </li>
+        <li>
+            <strong>Restablecer o inhabilitar el Identificador de Publicidad:</strong> Puede restablecer su ID de publicidad o eliminar la personalización de anuncios en su dispositivo accediendo a <em>Ajustes &gt; Google &gt; Anuncios &gt; Restablecer ID de publicidad</em> o <em>Eliminar ID de publicidad</em>.
+        </li>
+    </ul>
+
+    <h2>7. Seguridad de los Datos</h2>
+    <p>
+        Valoramos su confianza. Todas las conexiones requeridas para la carga de anuncios publicitarios se efectúan a través de protocolos seguros y cifrados <strong>HTTPS (SSL/TLS)</strong>, evitando la interceptación de tráfico por terceros.
+    </p>
+
+    <h2>8. Modificaciones a esta Política de Privacidad</h2>
+    <p>
+        Podemos actualizar esta Política de Privacidad periódicamente para reflejar mejoras en el juego o adecuaciones legales requeridas por Google Play. Cualquier cambio será publicado en esta misma página web con la fecha de revisión actualizada en la cabecera. Le recomendamos revisar este enlace ocasionalmente.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+        Si tiene dudas, preguntas o sugerencias sobre esta Política de Privacidad o sobre el tratamiento de datos en <strong>Carril X</strong>, puede comunicarse con el desarrollador a través del siguiente correo electrónico:
+    </p>
+    <div class="highlight-box">
+        <strong>Contacto del Desarrollador:</strong><br>
+        Correo electrónico: <a href="mailto:soporte.carrilx@gmail.com">soporte.carrilx@gmail.com</a><br>
+        Aplicación: <em>Carril X</em> (Android Package: <code>com.carrilx.carrilx</code>)
+    </div>
+
+    <footer>
+        &copy; 2026 Carril X. Todos los derechos reservados.
+    </footer>
+</div>
+
+</body>
+</html>
+

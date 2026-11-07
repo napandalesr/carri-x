@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://bck7jxfvcu5m"]
+
+[ext_resource type="PackedScene" uid="uid://bgg2ggmo1yiij" path="res://jugador.tscn" id="1_6ba58"]
+[ext_resource type="Script" uid="uid://b58oaww33ofuj" path="res://mundo2.gd" id="1_lgngo"]
+[ext_resource type="Texture2D" path="res://carreteras/carretera1.svg" id="2_fw4w5"]
+[ext_resource type="Texture2D" uid="uid://db58vuklxti52" path="res://fondoBotonJugar.png" id="5_5ckkb"]
+[ext_resource type="Texture2D" uid="uid://0h887bxqbev0" path="res://fondoInicioLuna.png" id="5_aou4a"]
+[ext_resource type="Texture2D" uid="uid://dydliiilqdikr" path="res://icon.svg" id="6_2hh7m"]
+[ext_resource type="Texture2D" path="res://corazon.svg" id="7_corazon"]
+[ext_resource type="AudioStream" uid="uid://drnytnm6ajden" path="res://sonidos/AudioFondoVol.wav" id="6_5ckkb"]
+
+[node name="Mundo" type="Node2D" unique_id=466415891]
+script = ExtResource("1_lgngo")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1485971494]
+scroll_base_scale = Vector2(0, 0)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=408025879]
+motion_mirroring = Vector2(0, 1152)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=697943816]
+position = Vector2(326, 575)
+scale = Vector2(1, 1.0722222)
+texture = ExtResource("2_fw4w5")
+
+[node name="Jugador" parent="." unique_id=1866421152 instance=ExtResource("1_6ba58")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1279708570]
+autostart = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1560571951]
+
+[node name="PuntajeLabel" type="Label" parent="HUD" unique_id=1746190506]
+offset_right = 40.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Puntos: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuGameOver" type="Control" parent="HUD" unique_id=174779581]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotonReiniciar" type="TextureButton" parent="HUD/MenuGameOver" unique_id=550646647]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 368.0
+offset_right = 499.2
+offset_bottom = 479.0
+texture_normal = ExtResource("5_5ckkb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="HUD/MenuGameOver" unique_id=1385068501]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 402.0
+offset_right = 374.0
+offset_bottom = 447.0
+theme_override_font_sizes/font_size = 32
+text = "Reiniciar"
+
+[node name="MenuInicio" type="Control" parent="HUD" unique_id=1954095887]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/MenuInicio" unique_id=154241894]
+layout_mode = 0
+offset_right = 647.0
+offset_bottom = 1161.0
+texture = ExtResource("5_aou4a")
+expand_mode = 1
+
+[node name="BotonJugar" type="TextureButton" parent="HUD/MenuInicio" unique_id=1012871175]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 360.0
+offset_right = 528.0
+offset_bottom = 455.0
+texture_normal = ExtResource("5_5ckkb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="HUD/MenuInicio" unique_id=641009217]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 360.0
+offset_right = 528.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 32
+text = "Jugar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuTransicion" type="Control" parent="HUD" unique_id=1476050540]
+layout_mode = 3
+anchor_right = 0.5
+anchor_bottom = 0.125
+offset_right = -284.0
+offset_bottom = -104.0
+
+[node name="ContenedorVidas" type="HBoxContainer" parent="HUD" unique_id=426339612]
+offset_left = 430.0
+offset_top = 15.0
+offset_right = 630.0
+offset_bottom = 57.0
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/ContenedorVidas" unique_id=1754535705]
+layout_mode = 2
+texture = ExtResource("7_corazon")
+expand_mode = 1
+custom_minimum_size = Vector2(34, 34)
+
+[node name="TextureRect2" type="TextureRect" parent="HUD/ContenedorVidas" unique_id=1179646663]
+layout_mode = 2
+texture = ExtResource("7_corazon")
+expand_mode = 1
+custom_minimum_size = Vector2(34, 34)
+
+[node name="TextureRect3" type="TextureRect" parent="HUD/ContenedorVidas" unique_id=301894944]
+layout_mode = 2
+texture = ExtResource("7_corazon")
+expand_mode = 1
+custom_minimum_size = Vector2(34, 34)
+
+[node name="TextureRect4" type="TextureRect" parent="HUD/ContenedorVidas"]
+layout_mode = 2
+texture = ExtResource("7_corazon")
+expand_mode = 1
+custom_minimum_size = Vector2(34, 34)
+
+[node name="TextureRect5" type="TextureRect" parent="HUD/ContenedorVidas"]
+layout_mode = 2
+texture = ExtResource("7_corazon")
+expand_mode = 1
+custom_minimum_size = Vector2(34, 34)
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=255888306]
+stream = ExtResource("6_5ckkb")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

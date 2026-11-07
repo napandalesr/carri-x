@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bgg2ggmo1yiij"]
+
+[ext_resource type="Script" uid="uid://cmywscdoq2gxj" path="res://jugador.gd" id="1_omvyu"]
+[ext_resource type="Texture2D" uid="uid://biaacy0udffa5" path="res://jugador.png" id="2_8o684"]
+[ext_resource type="Texture2D" uid="uid://cnho0hopixakh" path="res://flechaIzquierda.png" id="3_ukil5"]
+[ext_resource type="Texture2D" uid="uid://82586b36dcyi" path="res://flechaDerecha.png" id="4_7st5j"]
+[ext_resource type="AudioStream" uid="uid://dm1f5jmqj4c2n" path="res://sonidos/colisionCar.wav" id="5_7st5j"]
+[ext_resource type="AudioStream" uid="uid://d286c6yoo3lds" path="res://sonidos/cambioCarril.wav" id="5_cvhml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybuoj"]
+size = Vector2(70, 180)
+
+[node name="Jugador" type="Area2D" unique_id=594709128]
+script = ExtResource("1_omvyu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1715585279]
+position = Vector2(-6, 10.000004)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_8o684")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2012707082 groups=["jugador"]]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_ybuoj")
+
+[node name="InterfazUI" type="CanvasLayer" parent="." unique_id=1403044141]
+
+[node name="BotonIzquierda" type="TouchScreenButton" parent="InterfazUI" unique_id=747375686]
+position = Vector2(50, 950)
+scale = Vector2(0.58, 0.58)
+texture_normal = ExtResource("3_ukil5")
+action = "mover_izquierda"
+
+[node name="BotonDerecha" type="TouchScreenButton" parent="InterfazUI" unique_id=1429207524]
+position = Vector2(470, 950)
+scale = Vector2(0.555, 0.555)
+texture_normal = ExtResource("4_7st5j")
+action = "mover_derecha"
+
+[node name="AudioCambioCarril" type="AudioStreamPlayer" parent="." unique_id=717552562]
+stream = ExtResource("5_cvhml")
+
+[node name="AudioColision" type="AudioStreamPlayer" parent="." unique_id=1537154425]
+stream = ExtResource("5_7st5j")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

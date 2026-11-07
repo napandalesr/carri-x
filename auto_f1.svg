@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 400" width="240" height="400">
+  <!-- Ruedas Expresas Grandes F1 -->
+  <rect x="5" y="60" width="34" height="80" rx="10" fill="#0D0D0D" stroke="#333333" stroke-width="3"/>
+  <rect x="201" y="60" width="34" height="80" rx="10" fill="#0D0D0D" stroke="#333333" stroke-width="3"/>
+  <rect x="5" y="270" width="36" height="90" rx="10" fill="#0D0D0D" stroke="#333333" stroke-width="3"/>
+  <rect x="199" y="270" width="36" height="90" rx="10" fill="#0D0D0D" stroke="#333333" stroke-width="3"/>
+
+  <!-- Alerón Delantero F1 Gigante -->
+  <path d="M 15 25 L 225 25 L 210 50 L 30 50 Z" fill="#FFD700" stroke="#B8860B" stroke-width="3"/>
+  <rect x="95" y="15" width="50" height="12" rx="3" fill="#212121"/>
+
+  <!-- Morro / Chasis Agudo F1 -->
+  <path d="M 120 40 L 140 160 L 175 220 L 175 350 L 65 350 L 65 220 L 100 160 Z" fill="#FFD700" stroke="#DAA520" stroke-width="4"/>
+
+  <!-- Franja Central Carbono -->
+  <path d="M 120 40 L 128 350 L 112 350 Z" fill="#111111"/>
+
+  <!-- Cockpit / Casco del Piloto F1 -->
+  <ellipse cx="120" cy="210" rx="22" ry="35" fill="#111827"/>
+  <circle cx="120" cy="205" r="14" fill="#00E5FF"/> <!-- Casco cian -->
+
+  <!-- Pontones Laterales Aerodinámicos -->
+  <path d="M 45 190 L 65 180 L 65 310 L 40 310 Z" fill="#212121" stroke="#FFD700" stroke-width="2"/>
+  <path d="M 195 190 L 175 180 L 175 310 L 200 310 Z" fill="#212121" stroke="#FFD700" stroke-width="2"/>
+
+  <!-- Alerón Trasero F1 Masivo -->
+  <rect x="25" y="355" width="190" height="24" rx="6" fill="#111111" stroke="#FFD700" stroke-width="3"/>
+  <rect x="55" y="340" width="14" height="25" fill="#424242"/>
+  <rect x="171" y="340" width="14" height="25" fill="#424242"/>
+
+  <!-- Luz de Freno F1 LED Roja -->
+  <rect x="108" y="370" width="24" height="8" rx="3" fill="#FF1744"/>
+</svg>

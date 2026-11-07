@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://obstaculo_barricada.gd" id="1_barscript"]
+[ext_resource type="Texture2D" path="res://barricada_construccion.svg" id="2_bartex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_barricada"]
+size = Vector2(96, 52)
+
+[node name="obstaculoBarricada" type="Area2D" unique_id=876543210 groups=["enemigos"]]
+script = ExtResource("1_barscript")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=987123456]
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("2_bartex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=654321789]
+shape = SubResource("RectangleShape2D_barricada")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=321654987]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

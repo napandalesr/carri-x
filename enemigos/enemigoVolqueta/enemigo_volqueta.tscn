@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://by01cmjr8j1ad"]
+
+[ext_resource type="Texture2D" uid="uid://bdiubgsq6bm43" path="res://enemigos/enemigoVolqueta/enemigoVolqueta.png" id="1_gv27d"]
+[ext_resource type="Script" uid="uid://cptojjjjkd8af" path="res://enemigos/enemigoVolqueta/enemigo_volqueta.gd" id="1_rinol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybuoj"]
+size = Vector2(72, 270)
+
+[node name="enemigoVolqueta" type="Area2D" unique_id=984291931]
+script = ExtResource("1_rinol")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=913195838]
+scale = Vector2(0.484375, 0.484375)
+texture = ExtResource("1_gv27d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1859460256]
+position = Vector2(-1.5, 4)
+shape = SubResource("RectangleShape2D_ybuoj")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=359577055]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

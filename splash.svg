@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 648 1152" width="648" height="1152">
+  <defs>
+    <linearGradient id="splashBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="40%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="carGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B71C1C"/>
+      <stop offset="50%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#FF5252"/>
+    </linearGradient>
+    <radialGradient id="glowPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo Completo -->
+  <rect width="648" height="1152" fill="url(#splashBg)"/>
+
+  <!-- Halo de Luz Neón de Fondo -->
+  <circle cx="324" cy="520" r="260" fill="url(#glowPulse)"/>
+
+  <!-- Líneas de Velocidad de la Pista -->
+  <line x1="324" y1="200" x2="324" y2="850" stroke="#FBBF24" stroke-width="8" stroke-dasharray="45 35"/>
+  <line x1="170" y1="900" x2="260" y2="250" stroke="#00F0FF" stroke-width="4" opacity="0.6"/>
+  <line x1="478" y1="900" x2="388" y2="250" stroke="#00F0FF" stroke-width="4" opacity="0.6"/>
+
+  <!-- Auto Central en el Splash -->
+  <g transform="translate(204, 380)">
+    <!-- Ruedas -->
+    <rect x="15" y="55" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+    <rect x="197" y="55" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+    <rect x="15" y="275" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+    <rect x="197" y="275" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+
+    <!-- Carrocería Aerodinámica -->
+    <path d="M 120 28 C 65 28, 36 60, 36 120 L 32 290 C 32 355, 62 378, 120 378 C 178 378, 208 355, 208 290 L 204 120 C 204 60, 175 28, 120 28 Z" fill="url(#carGrad)" stroke="#7F1D1D" stroke-width="6"/>
+
+    <!-- Franja Central Blanca -->
+    <rect x="108" y="30" width="24" height="345" fill="#FFFFFF" opacity="0.95"/>
+
+    <!-- Faros Delanteros Neón -->
+    <polygon points="46,42 88,48 80,68 44,58" fill="#FFFDE7" stroke="#FDE047" stroke-width="3"/>
+    <polygon points="194,42 152,48 162,68 196,58" fill="#FFFDE7" stroke="#FDE047" stroke-width="3"/>
+
+    <!-- Parabrisas y Techo -->
+    <path d="M 54 122 L 186 122 L 172 198 L 68 198 Z" fill="#0F172A" stroke="#334155" stroke-width="4"/>
+    <path d="M 68 198 L 172 198 L 166 268 L 74 268 Z" fill="#991B1B"/>
+    <path d="M 74 272 L 166 272 L 158 316 L 82 316 Z" fill="#0F172A" stroke="#334155" stroke-width="3"/>
+
+    <!-- Alerón Trasero -->
+    <rect x="34" y="354" width="172" height="16" rx="5" fill="#0F172A" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+
+  <!-- Título del Juego -->
+  <text x="324" y="270" font-family="'Impact', 'Arial Black', sans-serif" font-size="58" font-weight="900" fill="#F8FAFC" text-anchor="middle" letter-spacing="6">CARRIL X</text>
+  <text x="324" y="315" font-family="'Arial', sans-serif" font-size="20" font-weight="bold" fill="#38BDF8" text-anchor="middle" letter-spacing="6">HIGHWAY DODGE</text>
+
+  <!-- Pie de Pantalla / Cargando -->
+  <text x="324" y="940" font-family="'Arial', sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle" letter-spacing="2">CARGANDO PISTA...</text>
+</svg>

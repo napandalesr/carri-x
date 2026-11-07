@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://35jdrt2tgwew"]
+
+[ext_resource type="Texture2D" uid="uid://cmk4obpe3rd4y" path="res://enemigoTracto.png" id="1_y1hdg"]
+[ext_resource type="Script" uid="uid://5qwfnllyuqpp" path="res://enemigo_tracto.gd" id="2_akpih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gte5h"]
+size = Vector2(115, 301)
+
+[node name="enemigoTracto" type="Area2D" unique_id=1024206242]
+script = ExtResource("2_akpih")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1969369162]
+scale = Vector2(0.39305556, 0.3930556)
+texture = ExtResource("1_y1hdg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2011122059]
+position = Vector2(-0.5, 5.5)
+shape = SubResource("RectangleShape2D_gte5h")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2063464554]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

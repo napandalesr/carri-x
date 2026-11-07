@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <radialGradient id="shieldBg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#80D8FF"/>
+      <stop offset="50%" stop-color="#00B0FF"/>
+      <stop offset="90%" stop-color="#0091EA"/>
+      <stop offset="100%" stop-color="#01579B"/>
+    </radialGradient>
+    <linearGradient id="shieldBorder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E0F7FA"/>
+      <stop offset="50%" stop-color="#40C4FF"/>
+      <stop offset="100%" stop-color="#006064"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Outer Energy Ring -->
+  <circle cx="64" cy="64" r="56" fill="none" stroke="#80D8FF" stroke-width="4" opacity="0.6" filter="url(#blueGlow)"/>
+  <!-- Shield Shape -->
+  <path d="M 64 16 L 100 30 C 100 75 75 104 64 112 C 53 104 28 75 28 30 Z" fill="url(#shieldBg)" stroke="url(#shieldBorder)" stroke-width="4"/>
+  <!-- Inner Shield Crest Emblem -->
+  <path d="M 64 28 L 88 38 C 88 70 70 92 64 98 C 58 92 40 70 40 38 Z" fill="none" stroke="#E0F7FA" stroke-width="2.5" opacity="0.8"/>
+  <!-- Center Star/Cross symbol -->
+  <polygon points="64,42 68,58 84,64 68,70 64,86 60,70 44,64 60,58" fill="#FFFFFF"/>
+</svg>

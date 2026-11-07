@@ -1,0 +1,112 @@
+# ==============================================================================
+# .gitignore Oficial y Optimizado para Godot 4.x
+# Proyecto: Carril X (Android Gradle, iOS Xcode, AdMob y GitHub Actions)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Caché interna del Motor Godot 4
+# ------------------------------------------------------------------------------
+# La carpeta .godot contiene la caché compilada, shaders importados y recursos locales.
+# Se regenera automáticamente en cada máquina o en los runners de GitHub Actions.
+.godot/
+*.translation
+
+# ------------------------------------------------------------------------------
+# 2. Paquetes y Binarios de Exportación
+# ------------------------------------------------------------------------------
+# Evita superar el límite estricto de 100 MB de GitHub por archivo.
+*.apk
+*.aab
+*.apks
+*.ipa
+*.app
+*.xcarchive
+*.exe
+*.dll
+*.so
+*.dylib
+*.pck
+*.zip
+Carril X.apk
+Carril X.aab
+build/
+bin/
+dist/
+output/
+
+# ------------------------------------------------------------------------------
+# 3. Android Gradle Build (Caché y Temporales de Compilación)
+# ------------------------------------------------------------------------------
+# Se ignoran las carpetas de compilación pesadas, pero se CONSERVAN los archivos
+# de configuración esenciales (build.gradle, gradle.properties, AndroidManifest.xml)
+.gradle/
+**/android/build/.gradle/
+**/android/build/build/
+**/android/build/assetPackInstallTime/src/main/assets/
+local.properties
+**/local.properties
+android/build/captures/
+
+# ------------------------------------------------------------------------------
+# 4. iOS & Xcode (Archivos temporales generados)
+# ------------------------------------------------------------------------------
+# El proyecto Xcode se genera dinámicamente en GitHub Actions o localmente.
+build/ios/
+ios/build/
+DerivedData/
+*.xcuserdatad/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# ------------------------------------------------------------------------------
+# 5. Seguridad Crítica: Claves, Keystores y Certificados
+# ------------------------------------------------------------------------------
+# ¡NUNCA deben subirse claves a repositorios públicos o privados!
+*.keystore
+*.jks
+*.p12
+*.p8
+*.mobileprovision
+*.cer
+*.crt
+*.pem
+*.key
+
+# ------------------------------------------------------------------------------
+# 6. Capturas de pantalla temporales de pruebas
+# ------------------------------------------------------------------------------
+# Las capturas tomadas durante el juego (F12) para pruebas no deben saturar el repo.
+capturas/
+screenshots/
+
+# ------------------------------------------------------------------------------
+# 7. Entornos de Desarrollo e IDEs (VS Code, Android Studio, JetBrains)
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# 8. Archivos Basura del Sistema Operativo (Windows & macOS)
+# ------------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# ------------------------------------------------------------------------------
+# 9. Registros y Archivos Temporales
+# ------------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+crash-*.log

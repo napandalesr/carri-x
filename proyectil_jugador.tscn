@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://proyectil_jugador.gd" id="1_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_laser"]
+size = Vector2(16, 40)
+
+[node name="ProyectilJugador" type="Area2D" groups=["proyectiles_jugador"]]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_script")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_laser")

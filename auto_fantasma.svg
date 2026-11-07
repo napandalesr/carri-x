@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 400" width="240" height="400">
+  <defs>
+    <radialGradient id="phantomAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#7b2cbf" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181a26"/>
+      <stop offset="50%" stop-color="#0b0d14"/>
+      <stop offset="100%" stop-color="#141829"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a0f0ff"/>
+      <stop offset="100%" stop-color="#00b4d8"/>
+    </linearGradient>
+    <linearGradient id="visorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4"/>
+      <stop offset="100%" stop-color="#03045e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Aura Espectral Fantasma -->
+  <ellipse cx="120" cy="200" rx="112" ry="185" fill="url(#phantomAura)"/>
+
+  <!-- Ruedas Oscuras con Trazos Holográficos -->
+  <rect x="16" y="55" width="24" height="70" rx="8" fill="#08090e" stroke="#00ffff" stroke-width="2.5"/>
+  <rect x="200" y="55" width="24" height="70" rx="8" fill="#08090e" stroke="#00ffff" stroke-width="2.5"/>
+  <rect x="16" y="275" width="24" height="70" rx="8" fill="#08090e" stroke="#7b2cbf" stroke-width="2.5"/>
+  <rect x="200" y="275" width="24" height="70" rx="8" fill="#08090e" stroke="#7b2cbf" stroke-width="2.5"/>
+
+  <!-- Carrocería Fantasmal Aerodinámica -->
+  <path d="M 120 22 C 65 22, 36 55, 36 115 L 32 290 C 32 360, 65 382, 120 382 C 175 382, 208 360, 208 290 L 204 115 C 204 55, 175 22, 120 22 Z" 
+        fill="url(#bodyGrad)" stroke="#00ffff" stroke-width="3.5"/>
+
+  <!-- Tomas de Aire Delanteras / Difusor -->
+  <polygon points="120,40 70,52 82,72 120,62" fill="#03045e" stroke="#00ffff" stroke-width="1.5"/>
+  <polygon points="120,40 170,52 158,72 120,62" fill="#03045e" stroke="#00ffff" stroke-width="1.5"/>
+
+  <!-- Faros Espectrales Ojos de Halcón -->
+  <polygon points="48,46 92,54 84,68 46,58" fill="url(#neonCyan)" stroke="#ffffff" stroke-width="1.5"/>
+  <polygon points="192,46 148,54 156,68 194,58" fill="url(#neonCyan)" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- Parabrisas Visor Holográfico -->
+  <path d="M 54 120 L 186 120 L 170 198 L 70 198 Z" fill="url(#visorGrad)" stroke="#7b2cbf" stroke-width="3"/>
+  <!-- Línea de escaneo holográfica -->
+  <line x1="62" y1="158" x2="178" y2="158" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+
+  <!-- Techo Carbono Espectral -->
+  <path d="M 70 198 L 170 198 L 164 265 L 76 265 Z" fill="#0f111a" stroke="#00ffff" stroke-width="1"/>
+  
+  <!-- Núcleo de Plasma Central -->
+  <circle cx="120" cy="231" r="14" fill="#00ffff" opacity="0.9"/>
+  <circle cx="120" cy="231" r="7" fill="#ffffff"/>
+
+  <!-- Cristales Laterales -->
+  <polygon points="46,128 52,194 66,194 62,128" fill="#0077b6" opacity="0.6"/>
+  <polygon points="194,128 188,194 174,194 178,128" fill="#0077b6" opacity="0.6"/>
+
+  <!-- Parabrisas Trasero -->
+  <path d="M 76 270 L 164 270 L 156 316 L 84 316 Z" fill="#03045e" stroke="#7b2cbf" stroke-width="2"/>
+
+  <!-- Alerón Espectral de Doble Ala -->
+  <path d="M 32 355 L 208 355 L 204 372 L 36 372 Z" fill="#08090e" stroke="#00ffff" stroke-width="2.5"/>
+  <rect x="62" y="345" width="14" height="22" fill="#7b2cbf"/>
+  <rect x="164" y="345" width="14" height="22" fill="#7b2cbf"/>
+
+  <!-- Barra de Escape de Plasma Neón -->
+  <rect x="48" y="378" width="144" height="6" rx="3" fill="#00ffff"/>
+</svg>

@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://enemigo_policia.gd" id="1_polscript"]
+[ext_resource type="Texture2D" path="res://auto_policia.svg" id="2_poltex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_policia"]
+size = Vector2(70, 180)
+
+[node name="enemigoPolicia" type="Area2D" unique_id=987654321 groups=["enemigos"]]
+script = ExtResource("1_polscript")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=123456789]
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_poltex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=456789123]
+shape = SubResource("RectangleShape2D_policia")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=789123456]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

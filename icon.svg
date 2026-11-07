@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF1744"/>
+      <stop offset="100%" stop-color="#FF9100"/>
+    </linearGradient>
+    <linearGradient id="carGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B71C1C"/>
+      <stop offset="50%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#FF5252"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo de Ícono Redondeado con Borde Neón -->
+  <rect x="8" y="8" width="496" height="496" rx="105" fill="url(#bgGrad)" stroke="#38BDF8" stroke-width="8"/>
+
+  <!-- Pista de Carreras Inclinada con Líneas de Velocidad -->
+  <polygon points="120,490 392,490 320,80 192,80" fill="#181E29"/>
+  <line x1="256" y1="90" x2="256" y2="480" stroke="#FBBF24" stroke-width="10" stroke-dasharray="35 30"/>
+  <line x1="165" y1="480" x2="215" y2="90" stroke="#00F0FF" stroke-width="6"/>
+  <line x1="347" y1="480" x2="297" y2="90" stroke="#00F0FF" stroke-width="6"/>
+
+  <!-- Estelas / Líneas de Aceleración y Nitro -->
+  <line x1="80" y1="280" x2="130" y2="280" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <line x1="60" y1="330" x2="120" y2="330" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="390" y1="280" x2="440" y2="280" stroke="#FF007F" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <line x1="380" y1="330" x2="450" y2="330" stroke="#FF007F" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Auto Deportivo Rojo Central en Perspectiva Superior -->
+  <g transform="translate(186, 170) scale(0.6)">
+    <!-- Ruedas -->
+    <rect x="15" y="55" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+    <rect x="197" y="55" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+    <rect x="15" y="275" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+    <rect x="197" y="275" width="28" height="75" rx="8" fill="#0A0A0A" stroke="#475569" stroke-width="3"/>
+
+    <!-- Carrocería Aerodinámica -->
+    <path d="M 120 28 C 65 28, 36 60, 36 120 L 32 290 C 32 355, 62 378, 120 378 C 178 378, 208 355, 208 290 L 204 120 C 204 60, 175 28, 120 28 Z" fill="url(#carGrad)" stroke="#7F1D1D" stroke-width="6"/>
+
+    <!-- Franja de Carrera Central -->
+    <rect x="108" y="30" width="24" height="345" fill="#FFFFFF" opacity="0.95"/>
+
+    <!-- Faros Delanteros Neón -->
+    <polygon points="46,42 88,48 80,68 44,58" fill="#FFFDE7" stroke="#FDE047" stroke-width="3"/>
+    <polygon points="194,42 152,48 162,68 196,58" fill="#FFFDE7" stroke="#FDE047" stroke-width="3"/>
+
+    <!-- Parabrisas y Techo -->
+    <path d="M 54 122 L 186 122 L 172 198 L 68 198 Z" fill="#0F172A" stroke="#334155" stroke-width="4"/>
+    <path d="M 68 198 L 172 198 L 166 268 L 74 268 Z" fill="#991B1B"/>
+    <path d="M 74 272 L 166 272 L 158 316 L 82 316 Z" fill="#0F172A" stroke="#334155" stroke-width="3"/>
+
+    <!-- Alerón Trasero -->
+    <rect x="34" y="354" width="172" height="16" rx="5" fill="#0F172A" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+
+  <!-- Insignia / Banner Inferior CARRIL X -->
+  <rect x="76" y="415" width="360" height="60" rx="16" fill="#090D16" stroke="#38BDF8" stroke-width="4"/>
+  <text x="256" y="457" font-family="'Impact', 'Arial Black', sans-serif" font-size="38" font-weight="900" fill="#F8FAFC" text-anchor="middle" letter-spacing="4">CARRIL X</text>
+</svg>
