@@ -68,8 +68,11 @@ jobs:
           curl -sL "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_macos.universal.zip" -o godot.zip
           unzip -q godot.zip
           mkdir -p /usr/local/bin
-          sudo mv Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
+          APP_NAME=$(find . -maxdepth 1 -name "*.app" | head -n 1)
+          echo "Aplicación Godot encontrada: $APP_NAME"
+          sudo mv "$APP_NAME/Contents/MacOS/Godot" /usr/local/bin/godot
           sudo chmod +x /usr/local/bin/godot
+          godot --version
 
           echo "Descargando plantillas de exportación..."
           TEMPLATES_DIR="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
@@ -77,12 +80,21 @@ jobs:
           curl -sL "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" -o templates.tpz
           unzip -q templates.tpz -d "$RUNNER_TEMP/templates_unzipped"
           mv "$RUNNER_TEMP/templates_unzipped/templates"/* "$TEMPLATES_DIR/"
-          echo "Godot y plantillas listos."
+          echo "Plantillas instaladas con éxito."
+          ls -la "$TEMPLATES_DIR"
 
       - name: 🛠️ Exportar Proyecto Godot a Proyecto Xcode
         run: |
           mkdir -p build/ios
-          godot --headless --export-release "${EXPORT_PRESET_NAME}" build/ios/${SCHEME_NAME}.xcodeproj
+          
+          echo "=== Paso 1: Pre-importar recursos de forma segura para evitar sobrecarga de memoria ==="
+          godot --headless --rendering-driver opengl3 --editor --quit || true
+          
+          echo "=== Paso 2: Exportar proyecto a estructura Xcode ==="
+          godot --headless --rendering-driver opengl3 --verbose --export-release "${EXPORT_PRESET_NAME}" "build/ios/${SCHEME_NAME}.ipa"
+          
+          echo "=== Verificando archivos generados ==="
+          ls -la build/ios
 
       - name: 📦 Compilar Archivo con Xcode (xcodebuild archive)
         run: |
