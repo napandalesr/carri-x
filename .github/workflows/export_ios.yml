@@ -100,6 +100,21 @@ jobs:
         run: |
           mkdir -p build/ios
           
+          # Inyectar el Apple Team ID del secreto si está presente
+          python3 -c "
+          import os
+          team_id = os.environ.get('APPLE_TEAM_ID', '').strip()
+          if team_id:
+              with open('export_presets.cfg', 'r') as f:
+                  content = f.read()
+              content = content.replace('application/app_store_team_id=\"XXXXXXXXXX\"', f'application/app_store_team_id=\"{team_id}\"')
+              with open('export_presets.cfg', 'w') as f:
+                  f.write(content)
+              print(f'Apple Team ID inyectado desde secrets: {team_id}')
+          else:
+              print('Usando Team ID por defecto en export_presets.cfg')
+          "
+          
           echo "=== Paso 1: Pre-importar recursos de forma segura para evitar sobrecarga de memoria ==="
           godot --headless --rendering-driver opengl3 --editor --quit || true
           
